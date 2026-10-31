@@ -83,7 +83,7 @@ const base=MS.medias[0].media,diffMes=MS.medias[1].media-MS.medias[0].media;
 const pesos=[base*MS.dif.pct/100,base*MS.dif.ic[0]/100,base*MS.dif.ic[1]/100];
 const shareLic=(byName('Licenciatura').ocupados+byName('Posgrado').ocupados)/Q.reduce((a,r)=>a+r.ocupados,0)*100;
 const grpOf=r=>['Licenciatura','Posgrado'].includes(r.nivel)?1:r.nivel==='Carrera técnica'?2:0;
-const lvl=r=>r.nivel==='Sin escolaridad'?'Sin escolaridad / preescolar':r.nivel==='Carrera técnica'?'técnica':r.nivel;
+const lvl=r=>r.nivel==='Sin escolaridad'?'Sin escolaridad / preescolar':r.nivel==='Carrera técnica'?'Técnica':r.nivel;
 function foot(src,n){return `<footer class="footer"><span>${src}</span><span>${n<M?String(n+1).padStart(2,'0')+' / '+M:'ANEXO A'+(n-M+1)}</span></footer>`}
 function mast(n){return `<div class="mast"><div class="kicker">${n<M?'Analítica para la toma de decisiones':'Respaldo metodológico · A'+(n-M+1)}</div><span class="logo-badge"><img class="logo" src="${D.logo}" alt="Universidad Anáhuac Querétaro"></span></div>`}
 const SRC='Fuente: INEGI, ENOE T2 2026. Elaboración propia con microdatos; estimaciones ponderadas con fac_tri.';
